@@ -1,0 +1,623 @@
+body,
+html {
+	height: 100%;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+::placeholder {
+	font-size: 12px;
+	padding: 15px;
+}
+.row{
+    justify-content: center;
+}
+
+/* bg image with form */
+
+.bg-img {
+	background-image: url("https://res.cloudinary.com/dswbxefk3/image/upload/v1624073003/webpage%20project/Banner_mage_hznkrs.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.bg-img form {
+	margin: 30px auto;
+	max-width: 350px;
+	padding: 20px;
+	background-color: white;
+}
+
+.row.bg-img #enquiryForm h4 {
+	color: #213559;
+	font-size: 20.08px;
+	line-height: 24px;
+	padding: 15px 0;
+	font-family: StagSans;
+}
+
+.row.bg-img input,
+.row.bg-img textarea {
+	width: 100%;
+	padding: 10px;
+	margin: 5px 0 10px 0;
+	border: none;
+	background: #f1f1f1;
+}
+
+.row.bg-img input:focus,
+.row.bg-img textarea:focus {
+	background-color: #ddd;
+	outline: none;
+}
+
+.row.bg-img .btn {
+	background-color: #DD5A6A;
+	color: white;
+	padding: 16px 20px;
+	border: none;
+	cursor: pointer;
+	width: 150px;
+	margin: 5px 0 10px 0;
+}
+
+.bg-img .left-box {
+	margin: 50px;
+}
+
+.bg-img .left-box .brand-logo {
+	padding: 30px 0px;
+}
+
+.bg-img .left-box p {
+	font-weight: bold;
+	color: #FFFFFF;
+	font-family: Titillium;
+	font-size: 31px;
+	letter-spacing: 1.28px;
+	line-height: 40px;
+}
+
+.bg-img .left-box span {
+	font-size: 25px;
+	letter-spacing: 3.59px;
+	line-height: 34px;
+	color: #FFFFFF;
+	font-family: StagSans;
+}
+
+.bg-img .left-box .btn.appointment {
+	width: auto;
+	border-radius: 3.2px;
+	font-size: 14.4px;
+	margin-top: 20px;
+	color: #FFFFFF;
+	font-family: Arial;
+	line-height: 17px;
+}
+
+
+/* capcha css */
+
+.bg-img .captcha {
+	background-color: #f9f9f9;
+	border: 2px solid #d3d3d3;
+	border-radius: 5px;
+	color: #4c4a4b;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 5px 0 10px 0;
+}
+
+.bg-img .text {
+	font-size: 1em;
+	font-weight: 500;
+	margin-right: 1em;
+}
+
+.bg-img .spinner {
+	position: relative;
+	width: 1em;
+	height: 1em;
+	display: flex;
+	margin: 2em 1em;
+	align-items: center;
+	justify-content: center;
+}
+
+.bg-img input[type="checkbox"] {
+	position: absolute;
+	opacity: 0;
+	z-index: -1;
+}
+
+.bg-img input[type="checkbox"]+.checkmark {
+	display: inline-block;
+	width: 2em;
+	height: 2em;
+	background-color: #fcfcfc;
+	border: 2.5px solid #c3c3c3;
+	border-radius: 3px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+.bg-img input[type="checkbox"]+.checkmark span {
+	content: '';
+	position: relative;
+	margin-top: -3px;
+	transform: rotate(45deg);
+	width: .75em;
+	height: 1.2em;
+	opacity: 0;
+}
+
+.bg-img input[type="checkbox"]+.checkmark>span:after {
+	content: '';
+	position: absolute;
+	display: block;
+	height: 3px;
+	bottom: 0;
+	left: 0;
+	background-color: #029f56;
+}
+
+.bg-img input[type="checkbox"]+.checkmark>span:before {
+	content: '';
+	position: absolute;
+	display: block;
+	width: 3px;
+	bottom: 0;
+	right: 0;
+	background-color: #029f56;
+}
+
+.bg-img input[type="checkbox"]:checked+.checkmark {
+	animation: 2s spin forwards;
+}
+
+.bg-img input[type="checkbox"]:checked+.checkmark>span {
+	animation: 1s fadein 1.9s forwards;
+}
+
+.bg-img input[type="checkbox"]:checked+.checkmark>span:after {
+	animation: .3s bottomslide 2s forwards;
+}
+
+.bg-img input[type="checkbox"]:checked+.checkmark>span:before {
+	animation: .5s rightslide 2.2s forwards;
+}
+
+@keyframes fadein {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes bottomslide {
+	0% {
+		width: 0;
+	}
+	100% {
+		width: 100%;
+	}
+}
+
+@keyframes rightslide {
+	0% {
+		height: 0;
+	}
+	100% {
+		height: 100%;
+	}
+}
+
+.bg-img .logo {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100%;
+	/* align-self:flex-end; */
+	margin: 0.5em 1em;
+	justify-content: center;
+}
+
+.bg-img .logo img {
+	height: 1.5em;
+	width: 1.5em;
+}
+
+.bg-img .logo p {
+	color: #9d9ba7;
+	margin: 0;
+	font-size: .5em;
+	font-weight: 700;
+	margin: .4em 0 .2em 0;
+}
+
+.bg-img .logo small {
+	color: #9d9ba7;
+	margin: 0;
+	font-size: .8em;
+}
+
+@keyframes spin {
+	10% {
+		width: 0;
+		height: 0;
+		border-width: 6px;
+	}
+	30% {
+		width: 0;
+		height: 0;
+		border-radius: 50%;
+		border-width: 1em;
+		transform: rotate(0deg);
+		border-color: rgb(199, 218, 245);
+	}
+	50% {
+		width: 2em;
+		height: 2em;
+		border-radius: 50%;
+		border-width: 4px;
+		border-color: rgb(199, 218, 245);
+		border-right-color: rgb(89, 152, 239);
+	}
+	70% {
+		border-width: 4px;
+		border-color: rgb(199, 218, 245);
+		border-right-color: rgb(89, 152, 239);
+	}
+	90% {
+		border-width: 4px;
+	}
+	100% {
+		width: 2em;
+		height: 2em;
+		border-radius: 50%;
+		transform: rotate(720deg);
+		border-color: transparent;
+	}
+}
+
+::selection {
+	background-color: transparent;
+	color: teal;
+}
+
+::-moz-selection {
+	background-color: transparent;
+	color: teal;
+}
+
+
+/* second row */
+
+.row.details {
+	margin-top: 70px;
+	justify-content: center;
+	align-items: center;
+}
+
+.row.details .left-box .bone-img {
+	width: 100%;
+}
+
+.row.details .right-box p.active {
+	background-image: radial-gradient(#2EC4B8, #6078EA);
+	font-weight: bold;
+	border-radius: 4px;
+	padding: 25px;
+	color: #FFFFFF;
+	font-family: StagSans;
+	font-size: 18px;
+	line-height: 26px;
+}
+
+.row.details .right-box p {
+	color: #000000;
+	border-bottom: 1px solid grey;
+	padding: 20px 0;
+	font-family: StagSans;
+	font-size: 17px;
+	line-height: 20px;
+}
+
+
+/* third row doctor */
+
+.row.heading h4,
+h4.heading4 {
+	font-weight: bold;
+	margin-top: 30px;
+	font-size: 31px;
+	letter-spacing: 1.28px;
+	line-height: 44px;
+	padding: 15px;
+	width: 100%;
+	color: #22B78E;
+	font-family: StagSans;
+}
+
+#card-list .card {
+	padding: 15px 50px;
+	text-align: center;
+	background-color: #F9F9FF;
+	border: unset;
+}
+
+#card-list img {
+	width: auto;
+	text-align: center;
+	margin: auto;
+}
+
+#card-list .title {
+	color: #1D5AA6;
+	font-weight: bold;
+	font-size: 22px;
+	letter-spacing: 1.26px;
+	line-height: 44px;
+	margin: 15px;
+	font-family: StagSans;
+}
+
+#card-list .position {
+	color: #1D5AA6;
+	font-size: 15px;
+	letter-spacing: 1.2px;
+	font-family: StagSans;
+}
+
+#card-list .description {
+	color: #000000;
+	font-size: 15px;
+	line-height: 20px;
+	margin-bottom: 30px;
+	padding: 0 20px;
+	font-family: StagSans;
+}
+
+#card-list .know-more {
+	background-image: radial-gradient(#2EC4B8, #6078EA);
+	width: 129px;
+	height: 49px;
+	margin: auto;
+	border: unset;
+	font-weight: bold;
+	color: #FFFFFF;
+	font-family: StagSans;
+	font-size: 15px;
+	letter-spacing: 1px;
+	line-height: 18px;
+}
+
+.row.doctor .card h4 {
+	margin-top: 0;
+	font-size: 24px;
+	line-height: 44px;
+	letter-spacing: 0.99px;
+	color: #22B78E;
+	font-family: StagSans;
+}
+
+#card-list .position:after {
+	content: "";
+	border-bottom: 1px solid #22B78E;
+	width: 37px;
+	display: block;
+	margin: auto;
+	padding-bottom: 15px;
+}
+
+#card-list .card:after {
+	content: "";
+	border-bottom: 1px solid #ECECFF;
+	width: 100%;
+	display: block;
+	margin: auto;
+	padding-top: 60px;
+}
+
+#card-list .card h4.undefined {
+	display: none;
+}
+
+div#cardBody,
+#warningBody {
+	width: 100%;
+}
+
+
+/* fourth row types of bonemarrow */
+
+#typesOfMarrow .plus {
+	margin: 5px 15px;
+}
+
+#typesOfMarrow span {
+	font-size: 14px;
+	color: #000000;
+	line-height: 39px;
+	font-family: StagSans;
+}
+div#typesOfMarrow {
+    justify-content:left;
+    padding:15px;
+}
+div#warning-list .card {
+	background-color: #FFFFFF;
+	border: 1px solid #E5EAFF;
+	border-radius: 4px;
+	box-shadow: 3px 5px 29px 0 rgba(187, 165, 228, 0.1);
+	margin: 15px auto;
+	height: 200px;
+}
+
+div#warning-list p {
+	color: #000000;
+	font-family: StagSans;
+	font-size: 14px;
+	line-height: 21px;
+}
+
+div#warning-list .card-body img {
+	width: 30px;
+	margin: 15px 0;
+}
+
+#accordionSection div#accordion {
+	width: 100%;
+}
+
+#accordionSection div#accordion a {
+	color: #1D5AA6;
+	font-family: StagSans;
+	font-size: 20px;
+	letter-spacing: 1.6px;
+	line-height: 22px;
+}
+
+#accordionSection div#accordion img {
+	float: right;
+	width: 22px;
+	height: 11px;
+}
+
+div#accordionSection {
+	margin-top: 50px;
+    padding: 15px;
+}
+
+#accordionSection div#accordion ul li {
+	border: unset;
+	padding-left: 0;
+}
+
+#accordionSection div#accordion .panel-body {
+	border-top: 1px solid #ECECFF;
+	border-radius: 0;
+	padding: 15px;
+}
+
+#accordionSection div#accordion ul li p {
+	color: #000000;
+	font-family: StagSans;
+	font-size: 14px;
+	line-height: 30px;
+}
+
+#accordionSection #accordion .panel-title {
+	padding-bottom: 15px;
+}
+
+
+/* testimonial */
+
+#testimonial .testimonialPara {
+	color: #000000;
+	font-family: StagSans;
+	font-size: 15px;
+	line-height: 21px;
+	padding: 15px;
+	width: 100%;
+}
+
+div#testimonial-list img {
+	width: 100%;
+}
+
+div#testimonial-list p.name {
+	color: #000000;
+	font-family: StagSans;
+	font-size: 22px;
+	line-height: 26px;
+}
+
+div#testimonial-list span {
+	color: #000000;
+	font-family: StagSans;
+	font-size: 14px;
+	line-height: 17px;
+	text-align: left;
+}
+
+div#testimonial-list .card {
+	background-color: #FFFFFF;
+	border-radius: 4px;
+	box-shadow: 9px 8px 27px 0 rgba(0, 0, 0, 0.04);
+}
+
+div#testimonial-list {
+	margin-bottom: 15px;
+}
+
+#button button.appointmentBtn {
+	background: #004498;
+	width: 221px;
+	height: 54px;
+	margin: auto;
+	color: white;
+	border: unset;
+	font-weight: bold;
+}
+
+#button {
+	margin-top: 30px;
+}
+
+
+/* footer css */
+
+.footer {
+	margin: 0 !important;
+	padding: 20px !important;
+	margin-top: 30px !important;
+}
+
+.footer .social-links {
+	text-align: center;
+}
+
+.footer .social-links .fa {
+	padding: 20px;
+	font-size: 30px;
+	text-align: center;
+	text-decoration: none;
+	margin: 5px 2px;
+}
+
+.footer .social-links .fa:hover {
+	opacity: 0.7;
+}
+
+.footer .social-links .fa-facebook {
+	background: #3B5998;
+	color: white;
+}
+
+.footer .social-links .fa-linkedin {
+	background: #007bb5;
+	color: white;
+}
+
+.footer .social-links .fa-youtube {
+	background: #bb0000;
+	color: white;
+}
+
+.footer .social-links .fa-instagram {
+	background: #125688;
+	color: white;
+}
