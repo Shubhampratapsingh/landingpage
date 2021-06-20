@@ -444,6 +444,7 @@ div#cardBody,
 
 #typesOfMarrow .plus {
 	margin: 5px 15px;
+    margin-bottom: 0;
 }
 
 #typesOfMarrow span {
@@ -456,6 +457,12 @@ div#typesOfMarrow {
     justify-content:left;
     padding:15px;
 }
+#typesOfMarrow li {
+    border:unset;
+    padding: 5px;
+    padding-left:0;
+}
+
 div#warning-list .card {
 	background-color: #FFFFFF;
 	border: 1px solid #E5EAFF;
