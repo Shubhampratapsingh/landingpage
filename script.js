@@ -13,7 +13,6 @@ $(document).ready(function () {
 </div>
      </div>`);
 	}
-	$('#card-list .card h4:contains("undefined")').remove();
 
 	var title = [{
 			"para": 'Failure to thrive – not gaining weight and height as per the age norms',
